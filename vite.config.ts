@@ -12,5 +12,6 @@ export default defineConfig(({ mode }) => {
     server: {
       port,
     },
+    base: "./",
   };
 });

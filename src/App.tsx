@@ -15,25 +15,22 @@ import Login from "./views/login";
 import PublicRoute from "./components/PublicRoute";
 import Dashboard from "./views/dashboard";
 import Profile from "./views/profile";
-import { AnimatePresence } from "framer-motion";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <AnimatePresence mode="wait">
-      <Route>
-        <Route path="auth" element={<PublicRoute />}>
-          <Route index element={<Navigate to="/auth/login" />} />
-          <Route path="login" element={<Login />} />
-          <Route path="*" element={<Navigate to="/auth/login" />} />
-        </Route>
-        <Route path="/" element={<ProtectedRoute />}>
-          <Route index element={<Dashboard />} />
-          <Route path="profile" element={<Profile />} />
-          <Route path="*" element={<Navigate to="/" />} />
-        </Route>
+    <Route>
+      <Route path="auth" element={<PublicRoute />}>
+        <Route index element={<Navigate to="/auth/login" />} />
+        <Route path="login" element={<Login />} />
         <Route path="*" element={<Navigate to="/auth/login" />} />
       </Route>
-    </AnimatePresence>
+      <Route path="/" element={<ProtectedRoute />}>
+        <Route index element={<Dashboard />} />
+        <Route path="profile" element={<Profile />} />
+        <Route path="*" element={<Navigate to="/" />} />
+      </Route>
+      <Route path="*" element={<Navigate to="/auth/login" />} />
+    </Route>
   )
 );
 

@@ -1,6 +1,5 @@
 import { useState, useCallback, useEffect } from "react";
 import { PokemonResponse, getPokemon } from "../api";
-import Swal from "sweetalert2";
 
 const useGetPokemonDetails = (name: string) => {
   const [pokemon, setPokemon] = useState<PokemonResponse>();

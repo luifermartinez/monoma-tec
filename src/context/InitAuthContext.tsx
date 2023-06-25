@@ -1,13 +1,10 @@
-import { FC, useEffect, useContext } from "react";
-import AuthContext from "./auth.context";
+import { FC, useEffect } from "react";
 
 interface Props {
   children: React.ReactNode;
 }
 
 const InitAuthContext: FC<Props> = ({ children }) => {
-  const { setUser } = useContext(AuthContext);
-
   useEffect(() => {
     const token = localStorage.getItem("token");
     if (!token) return;

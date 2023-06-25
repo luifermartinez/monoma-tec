@@ -1,8 +1,13 @@
 {
   "name": "monoma-tec",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
+  "author": {
+    "name": "Luis Martinez",
+    "email": "thelm132@gmail.com",
+    "url": "https://www.github.com/luifermartinez"
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",

@@ -23,6 +23,13 @@ Prueba técnica de Monoma para vacante Frontend Developer, hecha por Luis Martí
   yarn start
 ```
 
+- Ejecutar pruebas unitarias
+
+```
+  yarn dev
+  npx cypress open
+```
+
 ## Demo
 
 [![Deploy with Vercel](https://vercel.com/button)](https://monoma-test-luifermartinez.vercel.app/)

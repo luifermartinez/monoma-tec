@@ -8,9 +8,9 @@ const Login = () => {
         <title>Monoma | Login</title>
         <meta name="description" content="Login" />
       </Helmet>
-      <div className="flex justify-center items-center h-screen 0 p-2 font-mplus">
+      <div className="flex justify-center items-center min-h-[80vh] p-2 font-mplus">
         <div className="w-full max-w-md flex flex-col items-center">
-          <div className="relative">
+          <div className="relative mb-3">
             <img src="/img/logo-white.png" className="h-14 left-3/4 top-3/4" />
             <img
               className="h-9 absolute left-3/4 top-3/4"

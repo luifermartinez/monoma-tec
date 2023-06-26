@@ -20,7 +20,7 @@ Prueba técnica de Monoma para vacante Frontend Developer, hecha por Luis Martí
 
 ```
   yarn build
-  yarn start
+  yarn preview
 ```
 
 - Ejecutar pruebas unitarias

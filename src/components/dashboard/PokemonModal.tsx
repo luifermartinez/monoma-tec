@@ -17,7 +17,7 @@ const PokemonModal: FC<Props> = ({ pokemon, data, close }) => {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           className="fixed z-10 inset-0 overflow-y-auto"
-          aria-labelledby="modal-title"
+          aria-labelledby="modal-pokemon"
           role="dialog"
           aria-modal="true"
         >

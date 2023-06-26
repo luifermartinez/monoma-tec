@@ -36,6 +36,7 @@ const Pagination: FC<Props> = ({ page, limit, setPage, total, setLimit }) => {
       <ul className="inline-flex -space-x-px">
         <li>
           <button
+            aria-label="Previous Page"
             onClick={handlePrevious}
             className="px-3 py-2 ml-0 leading-tight bg-slate-800 bg-opacity-50 text-slate-400 border border-slate-700 hover:bg-slate-700 hover:text-white rounded-tl-md rounded-bl-md"
           >
@@ -59,6 +60,7 @@ const Pagination: FC<Props> = ({ page, limit, setPage, total, setLimit }) => {
         ))}
         <li>
           <button
+            aria-label="Next Page"
             onClick={handleNext}
             className="px-3 py-2 leading-tight bg-slate-800 bg-opacity-50 text-slate-400 border border-slate-700 hover:bg-slate-700 hover:text-white rounded-tr-md rounded-br-md"
           >

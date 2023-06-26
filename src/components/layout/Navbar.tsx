@@ -15,6 +15,7 @@ const Navbar = () => {
             <NavLink to={`/`}>
               <div className="relative">
                 <img
+                  loading="lazy"
                   src="/img/logo-white.png"
                   className="h-6 md:h-9 left-3/4 top-3/4 transition duration-100"
                 />

@@ -1,6 +1,8 @@
+import { FC, useState } from "react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 import { Pokemon, PokemonResponse } from "../../api";
-import { FC } from "react";
 import useGetPokemonDetails from "../../hooks/useGetPokemonDetails";
+import Spinner from "../Spinner";
 
 interface Props {
   pokemon: Pokemon;
@@ -10,6 +12,8 @@ interface Props {
 const PokemonCard: FC<Props> = ({ pokemon, onClickPokemon }) => {
   const { pokemon: data } = useGetPokemonDetails(pokemon.name);
 
+  const [isLoaded, setIsLoaded] = useState(false);
+
   return (
     <article
       key={pokemon.name}
@@ -18,15 +22,25 @@ const PokemonCard: FC<Props> = ({ pokemon, onClickPokemon }) => {
         data && onClickPokemon(pokemon, data);
       }}
     >
-      <div className="relative bg-white bg-opacity-10">
-        <img
-          src={data?.sprites.front_default}
-          alt={pokemon.name}
-          height={128}
-          className="h-32 w-full object-contain"
-        />
+      <div className="relative bg-white bg-opacity-10 w-full flex flex-col items-center">
+        <div
+          className={`flex items-center justify-center w-full text-center ${
+            !isLoaded && "animate-spin h-32 w-32"
+          }`}
+        >
+          <LazyLoadImage
+            placeholderSrc="/img/pokeball.svg"
+            src={data?.sprites.front_default}
+            alt={pokemon.name}
+            placeholder={<Spinner />}
+            afterLoad={() => setIsLoaded(true)}
+            height={!isLoaded ? 64 : 128}
+            width={!isLoaded ? 64 : 128}
+            className={"h-32 w-full object-contain flex justify-center"}
+          />
+        </div>
 
-        <div className="flex justify-end p-2 items-center">
+        <div className="flex justify-end p-2 items-center w-full">
           <span className="text-sm font-semibold bg-sky-600 px-2 rounded-full">
             {data ? `${(data?.weight / 10).toFixed(1)}kg` : "Peso"}
           </span>

@@ -34,6 +34,12 @@ Prueba técnica de Monoma para vacante Frontend Developer, hecha por Luis Martí
 
 [![Deploy with Vercel](https://vercel.com/button)](https://monoma-tec.vercel.app/)
 
+### Usuarios:
+
+- Usuario 1: `user@mail.com` - `12345678`
+- Usuario 2: `johndoe@mail.com` - `12345678`
+- Usuario 3: `user@monoma.com` - `12345678`
+
 ## 🔗 Links
 
 [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/luifer132/)

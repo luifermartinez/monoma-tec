@@ -1,7 +1,3 @@
 {
-  "routes": [
-    { "src": "/(.*)", "dest": "/" },
-    { "src": "/dashboard/(.*)", "dest": "/" },
-    { "src": "/auth/(.*)", "dest": "/auth/login" }
-  ]
+  "routes": [{ "src": "/(.*)", "dest": "/" }]
 }

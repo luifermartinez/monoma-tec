@@ -11,6 +11,7 @@ const Footer = () => {
         >
           Luis Martinez
         </a>
+        <span className="text-sm">{new Date().getFullYear()}</span>
       </div>
     </footer>
   );

@@ -32,7 +32,7 @@ Prueba técnica de Monoma para vacante Frontend Developer, hecha por Luis Martí
 
 ## Demo
 
-[![Deploy with Vercel](https://vercel.com/button)](https://monoma-test-luifermartinez.vercel.app/)
+[![Deploy with Vercel](https://vercel.com/button)](https://monoma-tec.vercel.app/)
 
 ## 🔗 Links
 

@@ -1,6 +1,5 @@
 import { Helmet } from "react-helmet";
 import DashboardWrapper from "../components/dashboard/DashboardWrapper";
-import PokemonSearchInput from "../components/dashboard/PokemonSearchInput";
 import PokemonList from "../components/dashboard/PokemonsList";
 import useGetPaginatedPokemons from "../hooks/useGetPaginatedPokemons";
 import DashboardBanner from "../components/dashboard/DashboardBanner";
@@ -17,7 +16,7 @@ const Dashboard = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      transition={{ duration: .5 }}
+      transition={{ duration: 0.5 }}
     >
       <Helmet>
         <title>Monoma | Dashboard</title>
@@ -25,12 +24,6 @@ const Dashboard = () => {
       </Helmet>
       <DashboardBanner />
       <DashboardWrapper>
-        <PokemonSearchInput
-          setSearch={(search) => console.log("search", search)}
-        />
-        <span className="text-gray-400 text-center text-sm">
-          Haz click en un pokemon para ver más información sobre el mismo
-        </span>
         {!loading ? (
           pokemons.length > 0 ? (
             <PokemonList pokemons={pokemons} />
